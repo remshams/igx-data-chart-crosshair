@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { DialogComponent } from '../dialog/dialog.component';
+import { OverlayComponent } from '../overlay/overlay.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DialogComponent],
+  imports: [OverlayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
