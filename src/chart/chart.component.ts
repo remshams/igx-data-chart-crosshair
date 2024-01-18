@@ -49,13 +49,18 @@ export class ChartComponent {
     { Year: '2018', USA: 34 },
     { Year: '2019', USA: 38 },
   ];
+
   data2 = [
-    { Year: '2009', USA: 19 },
-    { Year: '2010', USA: 24 },
-    { Year: '2011', USA: 28 },
-    { Year: '2013', USA: 38 },
-    { Year: '2014', USA: 31 },
-    { Year: '2016', USA: 40 },
-    { Year: '2019', USA: 38 },
+    { Year: '2009', USA: 20 },
+    { Year: '2010', USA: 25 },
+    { Year: '2011', USA: 29 },
+    { Year: '2012', USA: 27 },
+    { Year: '2013', USA: 39 },
+    { Year: '2014', USA: 32 },
+    { Year: '2015', USA: 20 },
+    { Year: '2016', USA: 30 },
+    { Year: '2017', USA: 51 },
+    { Year: '2018', USA: 35 },
+    { Year: '2019', USA: 39 },
   ];
 }
