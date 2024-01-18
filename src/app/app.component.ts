@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { ChartComponent } from '../chart/chart.component';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ChartComponent],
+  imports: [DialogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
