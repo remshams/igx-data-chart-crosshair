@@ -12,6 +12,9 @@ import {
   IgxCrosshairLayerModule,
   IgxDataToolTipLayerModule,
   IgxItemToolTipLayerModule,
+  IgxScatterSeriesModule,
+  IgxNumericXAxisModule,
+  IgxScatterLineSeriesModule,
 } from 'igniteui-angular-charts';
 
 @Component({
@@ -34,6 +37,9 @@ import {
     IgxCrosshairLayerModule,
     IgxDataToolTipLayerModule,
     IgxItemToolTipLayerModule,
+    IgxScatterSeriesModule,
+    IgxScatterLineSeriesModule,
+    IgxNumericXAxisModule,
   ],
 })
 export class ChartComponent {

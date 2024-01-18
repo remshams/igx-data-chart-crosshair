@@ -1,42 +1,63 @@
 <igx-data-chart height="100%" width="100%" #chart>
-  <igx-category-x-axis
-    #xAxis
-    [dataSource]="data"
-    label="Year"
-  ></igx-category-x-axis>
+  <igx-numeric-x-axis #xAxis label="Year"></igx-numeric-x-axis>
   <igx-numeric-y-axis
     #yAxis
     title="TWh"
     labelLocation="OutsideRight"
   ></igx-numeric-y-axis>
-
-  <igx-line-series
-    #series1
+  <igx-scatter-line-series
+    name="ScatterSeries1"
+    title="Europe"
     [xAxis]="xAxis"
     [yAxis]="yAxis"
+    xMemberPath="Year"
+    yMemberPath="USA"
     [dataSource]="data"
-    valueMemberPath="USA"
-    title="WEA"
-    [showDefaultTooltip]="true"
+    markerType="Circle"
+    showDefaultTooltip="true"
   >
-  </igx-line-series>
-  <igx-line-series
+  </igx-scatter-line-series>
+  <igx-scatter-line-series
+    name="ScatterSeries1"
+    title="USA"
     [xAxis]="xAxis"
     [yAxis]="yAxis"
+    xMemberPath="Year"
+    yMemberPath="USA"
     [dataSource]="data2"
-    valueMemberPath="USA"
-    title="CWE"
-    [showDefaultTooltip]="false"
-    [tooltipTemplate]="valueTooltip"
+    markerType="Circle"
+    showDefaultTooltip="true"
   >
-    >
-  </igx-line-series>
+  </igx-scatter-line-series>
+
+  <!-- <igx-line-series -->
+  <!--   #series1 -->
+  <!--   [xAxis]="xAxis" -->
+  <!--   [yAxis]="yAxis" -->
+  <!--   [dataSource]="data" -->
+  <!--   valueMemberPath="USA" -->
+  <!--   title="WEA" -->
+  <!--   [showDefaultTooltip]="true" -->
+  <!-- > -->
+  <!-- </igx-line-series> -->
+  <!-- <igx-line-series -->
+  <!--   [xAxis]="xAxis" -->
+  <!--   [yAxis]="yAxis" -->
+  <!--   [dataSource]="data2" -->
+  <!--   valueMemberPath="USA" -->
+  <!--   title="CWE" -->
+  <!--   [showDefaultTooltip]="false" -->
+  <!--   [tooltipTemplate]="valueTooltip" -->
+  <!-- > -->
+  <!--   > -->
+  <!-- </igx-line-series> -->
   <igx-item-tool-tip-layer></igx-item-tool-tip-layer>
 
   <igx-crosshair-layer
     [isAxisAnnotationEnabled]="true"
     horizontalLineVisibility="Collapsed"
     [useInterpolation]="false"
+    [thickness]="4"
   ></igx-crosshair-layer>
   <!-- <igx-data-tool-tip-layer -->
   <!--   [showDefaultTooltip]="false" -->
