@@ -1,5 +1,5 @@
 <igx-data-chart height="100%" width="100%" #chart>
-  <igx-numeric-x-axis #xAxis label="Year"></igx-numeric-x-axis>
+  <igx-numeric-x-axis #xAxis title="Year"></igx-numeric-x-axis>
   <igx-numeric-y-axis
     #yAxis
     title="TWh"
@@ -14,7 +14,7 @@
     yMemberPath="USA"
     [dataSource]="data"
     markerType="Circle"
-    showDefaultTooltip="true"
+    showDefaultTooltip="false"
   >
   </igx-scatter-line-series>
   <igx-scatter-line-series
@@ -26,7 +26,7 @@
     yMemberPath="USA"
     [dataSource]="data2"
     markerType="Circle"
-    showDefaultTooltip="true"
+    showDefaultTooltip="false"
   >
   </igx-scatter-line-series>
 
@@ -51,7 +51,7 @@
   <!-- > -->
   <!--   > -->
   <!-- </igx-line-series> -->
-  <igx-item-tool-tip-layer></igx-item-tool-tip-layer>
+  <!-- <igx-item-tool-tip-layer></igx-item-tool-tip-layer> -->
 
   <igx-crosshair-layer
     [isAxisAnnotationEnabled]="true"
@@ -59,12 +59,14 @@
     [useInterpolation]="false"
     [thickness]="4"
   ></igx-crosshair-layer>
-  <!-- <igx-data-tool-tip-layer -->
-  <!--   [showDefaultTooltip]="false" -->
-  <!--   [tooltipTemplate]="valueTooltip" -->
-  <!--   [isDefaultToolTipSelected]="false" -->
-  <!-- > -->
-  <!-- </igx-data-tool-tip-layer> -->
+  <igx-data-tool-tip-layer
+    [showDefaultTooltip]="false"
+    [tooltipTemplate]="valueTooltip"
+    [isDefaultToolTipSelected]="false"
+    [groupingMode]="'Grouped'"
+    [valueFormatAbbreviation]="'None'"
+  >
+  </igx-data-tool-tip-layer>
   <ng-template let-series="series" let-item="item" #valueTooltip>
     <div>Tooltip</div>
   </ng-template>
